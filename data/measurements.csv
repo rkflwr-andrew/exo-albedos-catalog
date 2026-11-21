@@ -2,17 +2,17 @@ planet,bandpass,mean_wl_nm,depth_ppm,depth_err_ppm,amp_ppm,amp_err_ppm,lit_albed
 
 TrES-2 b, Kepler, 598, 21, 23, , , <0.146, , , Kipping & Bakos 2011, https://doi.org/10.1088/0004-637X/733/1/36, filters/kepler.txt, m, 1, 
 TrES-2 b, Kepler, 598, , , 6.5, 1.9, <0.01, 0.007, , Kipping & Spiegel 2011, https://doi.org/10.1111/j.1745-3933.2011.01127.x, filters/kepler.txt, m, 1,
-TrES-2 b, Kepler, 598, , , , , 0.06, 0.05, , Demory & Seager 2011, , filters/kepler.txt, m, 1, no
+TrES-2 b, Kepler, 598, , , , , 0.06, 0.05, , Demory & Seager 2011, , filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, -3.9, 8.1, , , -0.004, 0.010, 0.019, Coughlin & López-Morales 2012, https://doi.org/10.1088/0004-6256/143/2/39, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 6.5, 1.8, 3.41, 0.82, -0.004, 0.010, , Barclay et al. 2012, https://doi.org/10.1088/0004-637X/761/1/53, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 7.5, 1.7, 4.77, 0.65, 0.003, 0.007, , Esteves et al. 2013, https://doi.org/10.1088/0004-637X/772/1/51, filters/kepler.txt, m, 1,
-TrES-2 b, Kepler, 598, , , , , 0.015, 0.003, , Heng & Demory 2013, https://doi.org/10.1088/0004-637X/777/2/100, filters/kepler.txt, m, 1, no
-TrES-2 b, Kepler, 598, , , , , 0.018, 0.003, , Mayorga et al. 2014, https://phys.au.dk/fileadmin/Project_updated_gr.2.pdf, filters/kepler.txt, m, 1, no
+TrES-2 b, Kepler, 598, , , , , 0.015, 0.003, , Heng & Demory 2013, https://doi.org/10.1088/0004-637X/777/2/100, filters/kepler.txt, m, 1,
+TrES-2 b, Kepler, 598, , , , , 0.018, 0.003, , Mayorga et al. 2014, https://phys.au.dk/fileadmin/Project_updated_gr.2.pdf, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 10.9, 2.3, 3.0, 0.8, 0.05, 0.01, , Angerhausen et al. 2015, https://doi.org/10.1086/683797, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , 1.5, 1.1, , , , Faigler & Mazeh 2015, https://doi.org/10.1088/0004-637X/800/1/73, filters/kepler.txt, m, 1,
-TrES-2 b, Kepler, 598, , , , , 0.007, 0.051, , Schwartz & Cowan 2015, https://doi.org/10.1093/mnras/stv470, filters/kepler.txt, m, 1, no
+TrES-2 b, Kepler, 598, , , , , 0.007, 0.051, , Schwartz & Cowan 2015, https://doi.org/10.1093/mnras/stv470, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 7.7, 2.6, 4.1, 1.8, 0.031, 0.010, , Esteves et al. 2015, https://doi.org/10.1088/0004-637X/804/2/150, filters/kepler.txt, m, 1,
-TrES-2 b, Kepler, 598, , , , , 0.019, 0.004, 0.019, von Paris et al. 2016, https://doi.org/10.1051/0004-6361/201526297, filters/kepler.txt, m, 1, no
-TrES-2 b, Kepler, 598, , , , , 0.02, 0.01, , Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad, filters/kepler.txt, m, 1, no
+TrES-2 b, Kepler, 598, , , , , 0.019, 0.004, 0.019, von Paris et al. 2016, https://doi.org/10.1051/0004-6361/201526297, filters/kepler.txt, m, 1,
+TrES-2 b, Kepler, 598, , , , , 0.02, 0.01, , Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , 2.21, 1.24, 0.01, 0.00, 0.01, Morris et al. 2024, https://doi.org/10.1051/0004-6361/202243831, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 10, 2, , , , , , Li & Shporer 2024, https://doi.org/10.3847/1538-3881/ad3807, filters/kepler.txt, m, 1,
