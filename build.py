@@ -123,10 +123,6 @@ def main():
             def cell(v):
                 return f'<td class="calc">{pm(v)}</td>'
 
-            def pair(a, b, flag):
-                dag = "&dagger;" if flag else ""
-                return f'<td class="calc">inst: {pm(a)}<br>hom: {pm(b)}{dag}</td>'
-
             def inp(kind):
                 v = m.get(f"{kind}_ppm")
                 if not v:
@@ -140,7 +136,7 @@ def main():
                 calc_cells = (cell(res["no_thermal"])
                               + (cell(res["measured_td"]) if td is not None else '<td class="calc">&mdash;</td>')
                               + f'<td class="calc">{pm(res["self_range"])}{dagger}</td>'
-                              + pair(res["zero_inst"], res["zero_hom"], False))
+                              + cell(res["zero_range"]))
             else:
                 calc_cells = f'<td colspan="4" class="calc na">Not calculated<br><small>{html.escape(reason)}</small></td>'
 
@@ -229,7 +225,7 @@ input{padding:.4rem;margin-bottom:.8rem;width:18rem} small{opacity:.85}
 @@BODY@@
 </table></div>
 <p><small>Values are median with +/&minus; 1&sigma; (one-sided shifts of each input added in quadrature).
-Self-consistent column: the midpoint of the instant re-radiation (f = 2/3) and homogeneous re-radiation (f = 1/4) results, with the error bar spanning the full range between them (including each case&rsquo;s measurement uncertainty). In the A<sub>B</sub>=0 column, inst/hom list the two cases separately. Literature albedo errors are shown as typed: one error gives &plusmn;, two different errors give +/&minus;.
+Self-consistent and A<sub>B</sub>=0 columns: the midpoint of the instant re-radiation (f = 2/3) and homogeneous re-radiation (f = 1/4) results, with the error bar spanning the full range between them (including each case&rsquo;s measurement uncertainty). Literature albedo errors are shown as typed: one error gives &plusmn;, two different errors give +/&minus;.
 &dagger; = no self-consistent solution with A<sub>B</sub> &le; 1 (A<sub>g</sub> &gt; 2/3); use the A<sub>B</sub>=0 column.
 Rows without a depth/amplitude, filter, or planet parameters (or with calculation turned off) are shown without a calculation. Full numbers: <a href="results.csv">results.csv</a>.</small></p>
 <script>

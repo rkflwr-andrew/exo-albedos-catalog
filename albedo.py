@@ -45,6 +45,7 @@ def main():
     print("4) Bond albedo = 0:")
     show("Ag, instant re-radiation (f=2/3)", r["zero_inst"])
     show("Ag, homogeneous re-radiation (f=1/4)", r["zero_hom"])
+    show("Ag, midpoint with full-range error bar", r["zero_range"])
 
 
 if __name__ == "__main__":

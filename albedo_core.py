@@ -107,6 +107,13 @@ def propagate(F, vals, sigs):
     return float(f0), float(np.sqrt(up2)), float(np.sqrt(dn2))
 
 
+def envelope(a, b):
+    """Combine two (value, +err, -err) results into midpoint with an error bar spanning both."""
+    lo, hi = (a, b) if a[0] <= b[0] else (b, a)
+    mid = 0.5 * (lo[0] + hi[0])
+    return (mid, hi[0] + hi[1] - mid, mid - (lo[0] - lo[2]))
+
+
 def compute_all(depth_ppm, err_ppm, rp_rs, a_rs, ts, ts_err, wl, tr,
                 photon=False, td=None, td_err=0.0):
     """
@@ -140,11 +147,9 @@ def compute_all(depth_ppm, err_ppm, rp_rs, a_rs, ts, ts_err, wl, tr,
         res["self_" + name] = propagate(F, [depth_ppm, ts], [err_ppm, ts_err])
         res["capped_" + name] = flag.get("c", False)
 
-    # Single self-consistent value: midpoint of the instant / homogeneous results, with an
-    # error bar whose edges reach the outer edges of the two cases (each including its own
+    # Single value for each pair: midpoint of the instant / homogeneous results, with an error
+    # bar whose edges reach the outer edges of the two cases (each including its own
     # measurement uncertainty).
-    a, b = res["self_inst"], res["self_hom"]
-    lo, hi = (a, b) if a[0] <= b[0] else (b, a)
-    mid = 0.5 * (lo[0] + hi[0])
-    res["self_range"] = (mid, hi[0] + hi[1] - mid, mid - (lo[0] - lo[2]))
+    res["self_range"] = envelope(res["self_inst"], res["self_hom"])
+    res["zero_range"] = envelope(res["zero_inst"], res["zero_hom"])
     return res
