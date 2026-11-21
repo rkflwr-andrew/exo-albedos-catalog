@@ -32,6 +32,20 @@ def link(text, url):
     return f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener">{text or "link"}</a>'
 
 
+def lit_text(m):
+    """Literature albedo as typed, with errors: one error -> +/-, two different errors -> +x / -y."""
+    v = m.get("lit_albedo", "")
+    if not v:
+        return "&mdash;"
+    clean = lambda e: html.escape(e.lstrip("+-\u2212\u00b1\u2013 ").strip())
+    plus, minus = clean(m.get("lit_err_plus", "")), clean(m.get("lit_err_minus", ""))
+    v = html.escape(v)
+    if plus and minus and plus != minus:
+        return f'{v}<sup>+{plus}</sup><sub>&minus;{minus}</sub>'
+    e = plus or minus
+    return f'{v} &plusmn; {e}' if e else v
+
+
 def pm(v):
     return f'{v[0]:.3f}<sup>+{v[1]:.3f}</sup><sub>&minus;{v[2]:.3f}</sub>'
 
@@ -107,11 +121,11 @@ def main():
                     sys.exit(f"ERROR in data/measurements.csv line {m['_line']} ({p['planet']}): {e}")
 
             def cell(v):
-                return f'<td>{pm(v)}</td>'
+                return f'<td class="calc">{pm(v)}</td>'
 
             def pair(a, b, flag):
                 dag = "&dagger;" if flag else ""
-                return f'<td>inst: {pm(a)}<br>hom: {pm(b)}{dag}</td>'
+                return f'<td class="calc">inst: {pm(a)}<br>hom: {pm(b)}{dag}</td>'
 
             def inp(kind):
                 v = m.get(f"{kind}_ppm")
@@ -122,12 +136,13 @@ def main():
                 return f'<td>{html.escape(v)}' + (f' &plusmn; {html.escape(e)}' if e else '') + f'{mark}</td>'
 
             if calc:
+                dagger = "&dagger;" if (res["capped_inst"] or res["capped_hom"]) else ""
                 calc_cells = (cell(res["no_thermal"])
-                              + (cell(res["measured_td"]) if td is not None else '<td>&mdash;</td>')
-                              + pair(res["self_inst"], res["self_hom"], res["capped_inst"] or res["capped_hom"])
+                              + (cell(res["measured_td"]) if td is not None else '<td class="calc">&mdash;</td>')
+                              + f'<td class="calc">{pm(res["self_range"])}{dagger}</td>'
                               + pair(res["zero_inst"], res["zero_hom"], False))
             else:
-                calc_cells = f'<td colspan="4" class="na">Not calculated<br><small>{html.escape(reason)}</small></td>'
+                calc_cells = f'<td colspan="4" class="calc na">Not calculated<br><small>{html.escape(reason)}</small></td>'
 
             planet_cell = ""
             if k == 0:
@@ -148,7 +163,7 @@ def main():
                                     + f'<br><small>{link(p.get("td_ref"), p.get("td_ref_url"))}</small></td>')
                 else:
                     planet_cell += f'<td rowspan="{len(ms)}" class="planet">&mdash;</td>'
-            lit = html.escape(m.get("lit_albedo", "")) or "&mdash;"
+            lit = lit_text(m)
             rows.append(
                 "<tr>" + planet_cell
                 + f'<td>{html.escape(m.get("bandpass", "")) or "&mdash;"}</td>'
@@ -171,9 +186,16 @@ def main():
             "Literature A<sub>g</sub> / reference",
             "A<sub>g</sub>: no thermal correction", "A<sub>g</sub>: thermal-corrected (literature T<sub>d</sub>)",
             "A<sub>g</sub>: self-consistent (A<sub>B</sub>=1.5A<sub>g</sub>)", "A<sub>g</sub>: A<sub>B</sub>=0"]
+    ncalc_cols = 4
+    group_row = (f'<tr class="group"><th colspan="{len(head) - ncalc_cols}" class="blank"></th>'
+                 f'<th colspan="{ncalc_cols}" class="calc">Calculated here from the listed depth / amplitude '
+                 f'(not literature values)</th></tr>')
+    head_rows = group_row + "<tr>" + "".join(
+        f'<th class="calc">{h}</th>' if i >= len(head) - ncalc_cols else f"<th>{h}</th>"
+        for i, h in enumerate(head)) + "</tr>"
     os.makedirs("site", exist_ok=True)
     with open("site/index.html", "w", encoding="utf-8") as f:
-        f.write(PAGE.replace("@@HEAD@@", "".join(f"<th>{h}</th>" for h in head))
+        f.write(PAGE.replace("@@HEAD@@", head_rows)
                     .replace("@@BODY@@", "\n".join(groups)))
     keys = []
     for d in out:
@@ -192,22 +214,22 @@ PAGE = """<!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exoplanet geometric albedos from secondary eclipses</title>
 <style>
-:root{--bg:#fff;--fg:#1a1a1a;--line:#d0d0d0;--head:#eee;--link:#0b5cad}
-@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#e8e8e8;--line:#444;--head:#262626;--link:#7ab7ff}}
+:root{--bg:#fff;--fg:#1a1a1a;--line:#d0d0d0;--head:#eee;--link:#0b5cad;--calc:#e8f1fb;--calchead:#cfe2f7}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#e8e8e8;--line:#444;--head:#262626;--link:#7ab7ff;--calc:#1b2733;--calchead:#25384b}}
 body{font-family:system-ui,sans-serif;margin:1.5rem;background:var(--bg);color:var(--fg)}
 a{color:var(--link)} .wrap{overflow-x:auto}
 table{border-collapse:collapse;font-size:.9rem} td,th{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
-th{background:var(--head);position:sticky;top:0} sup,sub{font-size:.7em;line-height:0}
+th{background:var(--head)} td.calc{background:var(--calc)} th.calc{background:var(--calchead)} th.blank{background:none;border:none} tr.group th.calc{text-align:center;font-size:.95rem} sup,sub{font-size:.7em;line-height:0}
 tbody{border-top:3px solid var(--line)} td.na{opacity:.7;font-style:italic} td.planet{background:var(--head)}
 input{padding:.4rem;margin-bottom:.8rem;width:18rem} small{opacity:.85}
 </style>
 <h1>Eclipse depths and geometric albedos</h1>
 <input id="q" placeholder="Filter by planet, bandpass, reference..." aria-label="filter table">
-<div class="wrap"><table id="t"><thead><tr>@@HEAD@@</tr></thead>
+<div class="wrap"><table id="t"><thead>@@HEAD@@</thead>
 @@BODY@@
 </table></div>
 <p><small>Values are median with +/&minus; 1&sigma; (one-sided shifts of each input added in quadrature).
-inst = instant re-radiation (f = 2/3), hom = homogeneous re-radiation (f = 1/4).
+Self-consistent column: the midpoint of the instant re-radiation (f = 2/3) and homogeneous re-radiation (f = 1/4) results, with the error bar spanning the full range between them (including each case&rsquo;s measurement uncertainty). In the A<sub>B</sub>=0 column, inst/hom list the two cases separately. Literature albedo errors are shown as typed: one error gives &plusmn;, two different errors give +/&minus;.
 &dagger; = no self-consistent solution with A<sub>B</sub> &le; 1 (A<sub>g</sub> &gt; 2/3); use the A<sub>B</sub>=0 column.
 Rows without a depth/amplitude, filter, or planet parameters (or with calculation turned off) are shown without a calculation. Full numbers: <a href="results.csv">results.csv</a>.</small></p>
 <script>

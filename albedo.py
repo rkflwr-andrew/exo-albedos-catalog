@@ -39,6 +39,7 @@ def main():
     print("3) Self-consistent (A_B = 1.5 Ag; A_B = 0 if Ag <= 0):")
     show("Ag, instant re-radiation (f=2/3)", r["self_inst"])
     show("Ag, homogeneous re-radiation (f=1/4)", r["self_hom"])
+    show("Ag, midpoint with full-range error bar", r["self_range"])
     if r["capped_inst"] or r["capped_hom"]:
         print("  !! no solution with A_B <= 1 (Ag > 2/3): use calculation 4")
     print("4) Bond albedo = 0:")

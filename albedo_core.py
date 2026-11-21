@@ -139,4 +139,12 @@ def compute_all(depth_ppm, err_ppm, rp_rs, a_rs, ts, ts_err, wl, tr,
 
         res["self_" + name] = propagate(F, [depth_ppm, ts], [err_ppm, ts_err])
         res["capped_" + name] = flag.get("c", False)
+
+    # Single self-consistent value: midpoint of the instant / homogeneous results, with an
+    # error bar whose edges reach the outer edges of the two cases (each including its own
+    # measurement uncertainty).
+    a, b = res["self_inst"], res["self_hom"]
+    lo, hi = (a, b) if a[0] <= b[0] else (b, a)
+    mid = 0.5 * (lo[0] + hi[0])
+    res["self_range"] = (mid, hi[0] + hi[1] - mid, mid - (lo[0] - lo[2]))
     return res
