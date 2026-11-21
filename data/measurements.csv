@@ -16,6 +16,7 @@ TrES-2 b, Kepler, 598, -3.9, 8.1, , , -0.004, 0.010, 0.019, Coughlin & López-Mo
 TrES-2 b, Kepler, 598, , , , , 0.06, 0.05, , Demory & Seager 2011, https://boris-portal.unibe.ch/server/api/core/bitstreams/ed6cfe68-37e5-4302-bcf3-d09e1a659e27/content, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , 6.5, 1.9, <0.01, 0.007, , Kipping & Spiegel 2011, https://doi.org/10.1111/j.1745-3933.2011.01127.x, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 21, 23, , , <0.146, , , Kipping & Bakos 2011b, https://doi.org/10.1088/0004-637X/733/1/36, filters/kepler.txt, m, 1, 
+TrES-2 b, EPOXI, 558, 230, 710, , , 6.6, , , Christiansen et al. 2010, https://doi.org/10.1088/0004-637X/726/2/94, filters/epoxi.txt, m, 1, 
 
 Kepler-5 b, Kepler, 598, 21, 3, , , , , , Li & Shporer 2024, https://doi.org/10.3847/1538-3881/ad3807, filters/kepler.txt, m, 1,
 Kepler-5 b, Kepler, 598, , , , , 0.09, 0.04, , Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad, filters/kepler.txt, m, 1,
@@ -32,4 +33,17 @@ Kepler-5 b, Kepler, 598, , , , , 0.21, 0.10, , Demory & Seager 2011, https://bor
 Kepler-5 b, Kepler, 598, 26, 27, , , 0.15, ,0.10 , Kipping & Bakos 2011a, https://doi.org/10.1088/0004-637X/730/1/50, filters/kepler.txt, m, 1, 
 Kepler-5 b, Kepler, 598, 36, , , , , , , Koch et al. 2010, https://doi.org/10.1088/2041-8205/713/2/L131, filters/kepler.txt, m, 1,
 
+Kepler-6 b, Kepler, 598, 16, 3, , , , , , Li & Shporer 2024, https://doi.org/10.3847/1538-3881/ad3807, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, , , , , 0.05, 0.03, , Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, , , , , 0.091, 0.004, , Tarnas 2016, https://sethredfield.wescreates.wesleyan.edu/jesse_tarnas_thesis_final.pdf, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, 11.1, 5.3, 17.2, 6.3, 0.070, 0.031, 0.034, Esteves et al. 2015, https://doi.org/10.1088/0004-637X/804/2/150, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, , , , , 0.025, 0.055, , Schwartz & Cowan 2015, https://doi.org/10.1093/mnras/stv470, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, , , , , 0.018, 0.025, 0.013, Serindag 2015, https://sethredfield.wescreates.wesleyan.edu/dilovanthesis.pdf, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, 11.3, 4.2, 9.5, 2.7, 0.07, 0.03, , Angerhausen et al. 2015, https://doi.org/10.1086/683797, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, , , , , 0.091, 0.021, , Heng & Demory 2013, https://doi.org/10.1088/0004-637X/777/2/100, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, 8.9, 3.8, 12.4, 2.0, 0.059, 0.025, , Esteves et al. 2013, https://doi.org/10.1088/0004-637X/772/1/51, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, -17.1, 22.3, , , <0.31, , , Coughlin & López-Morales 2012, https://doi.org/10.1088/0004-6256/143/2/39, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, 22, 7, , , 0.11, 0.04, , Désert et al. 2011, https://doi.org/10.1088/0067-0049/197/1/11, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, , , , , 0.18, 0.09, , Demory & Seager 2011, https://boris-portal.unibe.ch/server/api/core/bitstreams/ed6cfe68-37e5-4302-bcf3-d09e1a659e27/content, filters/kepler.txt, m, 1,
+Kepler-6 b, Kepler, 598, <51.5, , , , <0.32, , , Kipping & Bakos 2011a, https://doi.org/10.1088/0004-637X/730/1/50, filters/kepler.txt, m, 1, 
 
