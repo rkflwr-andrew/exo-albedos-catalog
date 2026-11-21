@@ -1,7 +1,7 @@
 planet,bandpass,mean_wl_nm,depth_ppm,depth_err_ppm,amp_ppm,amp_err_ppm,lit_albedo,lit_err_plus,lit_err_minus,ref,ref_url,filter,wl_unit,photon,calculate
 
 TrES-2 b, Kepler, 598, 10, 3, , , , , , Li & Shporer 2024, https://doi.org/10.3847/1538-3881/ad3807, filters/kepler.txt, m, 1,
-TrES-2 b, Kepler, 598, , , 2.21, 1.24, 0.01, 0.00, 0.01, Morris et al. 2024, https://doi.org/10.1051/0004-6361/202243831, filters/kepler.txt, m, 1,
+TrES-2 b, Kepler, 598, , , 3.82, 2.29, 0.01, 0.00, 0.01, Morris et al. 2024, https://doi.org/10.1051/0004-6361/202243831, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , , , 0.02, 0.01, , Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , , , 0.019, 0.004, 0.019, von Paris et al. 2016, https://doi.org/10.1051/0004-6361/201526297, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 7.7, 2.6, 4.1, 1.8, 0.031, 0.010, , Esteves et al. 2015, https://doi.org/10.1088/0004-637X/804/2/150, filters/kepler.txt, m, 1,
@@ -46,4 +46,21 @@ Kepler-6 b, Kepler, 598, -17.1, 22.3, , , <0.31, , , Coughlin & López-Morales 2
 Kepler-6 b, Kepler, 598, 22, 7, , , 0.11, 0.04, , Désert et al. 2011, https://doi.org/10.1088/0067-0049/197/1/11, filters/kepler.txt, m, 1,
 Kepler-6 b, Kepler, 598, , , , , 0.18, 0.09, , Demory & Seager 2011, https://boris-portal.unibe.ch/server/api/core/bitstreams/ed6cfe68-37e5-4302-bcf3-d09e1a659e27/content, filters/kepler.txt, m, 1,
 Kepler-6 b, Kepler, 598, <51.5, , , , <0.32, , , Kipping & Bakos 2011a, https://doi.org/10.1088/0004-637X/730/1/50, filters/kepler.txt, m, 1, 
+
+Kepler-7 b, Kepler, 598, 47, 3, , , , , , Li & Shporer 2024, https://doi.org/10.3847/1538-3881/ad3807, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , 12.90, 1.85, 0.26, 0.01, , Morris et al. 2024, https://doi.org/10.1051/0004-6361/202243831, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.25, 0.01, 0.02, Heng et al. 2021, https://doi.org/10.1038/s41550-021-01444-7, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.24, 0.07, 0.08, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.26, 0.11, , Serrano et al. 2018, https://doi.org/10.1051/0004-6361/201731206, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.032, 0.026, , Tarnas 2016, https://sethredfield.wescreates.wesleyan.edu/jesse_tarnas_thesis_final.pdf, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 39, 11, 48, 17, 0.248, 0.073, 0.071, Esteves et al. 2015, https://doi.org/10.1088/0004-637X/804/2/150, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.313, 0.088, , Schwartz & Cowan 2015, https://doi.org/10.1093/mnras/stv470, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 41.5, 3.9, 48.0, 2.1, 0.20, 0.09, 0.10, Hu et al. 2015, https://doi.org/10.1088/0004-637X/802/1/51, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 46.6, 4.0, 47.8, 5.2, 0.32, 0.03, , Angerhausen et al. 2015, https://doi.org/10.1086/683797, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 48, 3, 50, 2, 0.35, 0.02, , Demory et al. 2013, https://doi.org/10.1088/2041-8205/735/1/L12, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.352, 0.023, , Heng & Demory 2013, https://doi.org/10.1088/0004-637X/777/2/100, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 53.2, 14.1, , , 0.63, 1.06, 0.41, Coughlin & López-Morales 2012, https://doi.org/10.1088/0004-6256/143/2/39, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 44, 5, 42, 4, 0.32, 0.03, , Demory et al. 2011, https://doi.org/10.1088/2041-8205/735/1/L12, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, , , , , 0.35, 0.11, , Demory & Seager 2011, https://boris-portal.unibe.ch/server/api/core/bitstreams/ed6cfe68-37e5-4302-bcf3-d09e1a659e27/content, filters/kepler.txt, m, 1,
+Kepler-7 b, Kepler, 598, 47, 14, , , 0.38, 0.12, , Kipping & Bakos 2011a, https://doi.org/10.1088/0004-637X/730/1/50, filters/kepler.txt, m, 1, 
 
