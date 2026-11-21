@@ -4,7 +4,7 @@ TrES-2 b, Kepler, 598, 21, 23, , , <0.146, , , Kipping & Bakos 2011, https://doi
 TrES-2 b, Kepler, 598, , , 6.5, 1.9, <0.01, 0.007, , Kipping & Spiegel 2011, https://doi.org/10.1111/j.1745-3933.2011.01127.x, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , , , 0.06, 0.05, , Demory & Seager 2011, , filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, -3.9, 8.1, , , -0.004, 0.010, 0.019, Coughlin & López-Morales 2012, https://doi.org/10.1088/0004-6256/143/2/39, filters/kepler.txt, m, 1,
-TrES-2 b, Kepler, 598, 6.5, 1.8, 3.41, 0.82, -0.004, 0.010, , Barclay et al. 2012, https://doi.org/10.1088/0004-637X/761/1/53, filters/kepler.txt, m, 1,
+TrES-2 b, Kepler, 598, 6.5, 1.8, 3.41, 0.82, 0.014, 0.002, 0.003, Barclay et al. 2012, https://doi.org/10.1088/0004-637X/761/1/53, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, 7.5, 1.7, 4.77, 0.65, 0.003, 0.007, , Esteves et al. 2013, https://doi.org/10.1088/0004-637X/772/1/51, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , , , 0.015, 0.003, , Heng & Demory 2013, https://doi.org/10.1088/0004-637X/777/2/100, filters/kepler.txt, m, 1,
 TrES-2 b, Kepler, 598, , , , , 0.018, 0.003, , Mayorga et al. 2014, https://phys.au.dk/fileadmin/Project_updated_gr.2.pdf, filters/kepler.txt, m, 1,
