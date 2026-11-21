@@ -1,0 +1,9 @@
+planet,bandpass,mean_wl_nm,depth_ppm,depth_err_ppm,amp_ppm,amp_err_ppm,lit_albedo,ref,ref_url,filter,wl_unit,photon,calculate
+EXAMPLE-1 b (placeholder),Example,600,60,15,,,0.35,Placeholder et al. 2000,https://example.com/paper,filters/example_filter.txt,m,1,
+EXAMPLE-1 b (placeholder),Example,600,,,80,20,<0.6,Placeholder & Fake 2008,,filters/example_filter.txt,m,1,
+EXAMPLE-1 b (placeholder),Example,600,45,12,50,10,0.2,Third et al. 2015,https://example.com/third,filters/example_filter.txt,m,1,
+EXAMPLE-1 b (placeholder),Old filter,520,70,30,,,0.4,Old et al. 1990,,,,,
+EXAMPLE-1 b (placeholder),Skipped,800,90,20,,,0.5,Skip et al. 2020,,filters/example_filter.txt,m,1,no
+EXAMPLE-1 b (placeholder),Example,650,,,,,0.1,Lit only et al. 2010,,,,,
+EXAMPLE-2 b (placeholder),Example,600,12,10,,,<0.2,Placeholder & Fake 2001,10.0000/example-doi,filters/example_filter.txt,m,1,
+EXAMPLE-3 b (placeholder: literature value only),,,,,,,0.3,Name only et al. 2012,,,,,

@@ -1,0 +1,4 @@
+planet,rp_rs,a_rs,ts,ts_err,ref,ref_url,td_k,td_err_k,td_ref,td_ref_url
+EXAMPLE-1 b (placeholder),0.10,4.5,6000,100,Placeholder et al. 1999,https://example.com/params1,2500,150,Other et al. 2003,10.0000/example-td
+EXAMPLE-2 b (placeholder),0.05,8.0,5500,100,Fake 2001,10.0000/example-params,,,,
+EXAMPLE-3 b (placeholder: literature value only),,,,,,,,,,
