@@ -1,5 +1,5 @@
 planet,rp_rs,a_rs,ts,ts_err,ref,ref_url,td_k,td_err_k,td_ref,td_ref_url
-TrES-2 b, 0.1254, 7.903, 5795, 73, Öztürk & Erdem 2019, doi.org/10.1093/mnras/stz747, 1629, 63, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
-Kepler-5 b, 0.079965, 6.450, 6332, 127, Berger et al. 2018, doi.org/10.3847/1538-4357/aada83, 1970, 100, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
-Kepler-6 b, 0.09424, 7.503, 5660, 113, Berger et al. 2018, doi.org/10.3847/1538-4357/aada83, 1728, 98, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
-Kepler-7 b, 0.08294, 6.637, 6084, 122, Berger et al. 2018, doi.org/10.3847/1538-4357/aada83, 1000, 200, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
+TrES-2 b, 0.1254, 7.903, 5795, 73, Öztürk & Erdem 2019, https://doi.org/10.1093/mnras/stz747, 1629, 63, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
+Kepler-5 b, 0.079965, 6.450, 6332, 127, Berger et al. 2018, https://doi.org/10.3847/1538-4357/aada83, 1970, 100, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
+Kepler-6 b, 0.09424, 7.503, 5660, 113, Berger et al. 2018, https://doi.org/10.3847/1538-4357/aada83, 1728, 98, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
+Kepler-7 b, 0.08294, 6.637, 6084, 122, Berger et al. 2018, https://doi.org/10.3847/1538-4357/aada83, 1000, 200, Wong et al. 2020, https://doi.org/10.3847/1538-3881/ababad
