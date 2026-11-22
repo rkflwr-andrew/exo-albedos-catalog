@@ -92,3 +92,13 @@ Kepler-7 b, Kepler, 598, 44, 5, 42, 4, 0.32, 0.03, , Demory et al. 2011, https:/
 Kepler-7 b, Kepler, 598, , , , , 0.35, 0.11, , Demory & Seager 2011, https://boris-portal.unibe.ch/server/api/core/bitstreams/ed6cfe68-37e5-4302-bcf3-d09e1a659e27/content, filters/kepler.txt, m, 1,
 Kepler-7 b, Kepler, 598, 47, 14, , , 0.38, 0.12, , Kipping & Bakos 2011a, https://doi.org/10.1088/0004-637X/730/1/50, filters/kepler.txt, m, 1, 
 
+Kepler-12 b, Kepler, 598, 25, 4, , , , , , Li & Shporer 2024, https://doi.org/10.3847/1538-3881/ad3807, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, , , , , 0.17, 0.08, , Qi 2023, https://doi.org/10.54254/2753-8818/12/20230453, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, 14.3, 2.5, 17.5, 2.2, , , , Shporer & Hu 2015, https://sethredfield.wescreates.wesleyan.edu/dilovanthesis.pdf, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, 20.2, 8.3, 22.9, 6.2, 0.092, 0.039, 0.035, Esteves et al. 2015, https://doi.org/10.1088/0004-637X/804/2/150, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, 18.7, 4.9, 16.7, 2.6, 0.14, 0.04, , Angerhausen et al. 2015, https://doi.org/10.1086/683797, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, , , , , 0.078, 0.019, , Heng & Demory 2013, https://doi.org/10.1088/0004-637X/777/2/100, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, 8.9, 3.8, 12.4, 2.0, 0.059, 0.025, , Esteves et al. 2013, https://doi.org/10.1088/0004-637X/772/1/51, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, 4.7, 17.2, , , <0.40, , , Coughlin & López-Morales 2012, https://doi.org/10.1088/0004-6256/143/2/39, filters/kepler.txt, m, 1,
+Kepler-12 b, Kepler, 598, 31, 8, , , 0.14, 0.04, , Fortney et al. 2011, https://doi.org/10.1088/0067-0049/197/1/9, filters/kepler.txt, m, 1, 
+
